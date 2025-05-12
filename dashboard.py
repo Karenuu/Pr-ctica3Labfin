@@ -24,14 +24,14 @@ st.markdown("""
 # Load data
 @st.cache_data
 def load_data():
-    data_path = r'C:\Users\hvasq\OneDrive\Documentos\Karen\VisDatosFinancieros\Pract3\Datos\V2'
+    data_path = r'/workspaces/Pr-ctica3Labfin/Data/'
     try:
-        factsale = pd.read_csv(f'{data_path}\\FactSale.csv')
-        dimcustomer = pd.read_csv(f'{data_path}\\DimCostumer.csv')
-        dimcity = pd.read_csv(f'{data_path}\\DimCity.csv')
-        dimdate = pd.read_csv(f'{data_path}\\DimDate.csv')
-        dimemployee = pd.read_csv(f'{data_path}\\DimEmployee.csv')
-        dimstockitem = pd.read_csv(f'{data_path}\\DimStockItem.csv')
+        factsale = pd.read_csv(f'{data_path}FactSale.csv')
+        dimcustomer = pd.read_csv(f'{data_path}DimCostumer.csv')
+        dimcity = pd.read_csv(f'{data_path}DimCity.csv')
+        dimdate = pd.read_csv(f'{data_path}DimDate.csv')
+        dimemployee = pd.read_csv(f'{data_path}DimEmployee.csv')
+        dimstockitem = pd.read_csv(f'{data_path}DimStockItem.csv')
 
         # Merge all dataframes
         merged_df = factsale.merge(dimcustomer, on='Customer Key', how='left', suffixes=('', '_customer')) \
