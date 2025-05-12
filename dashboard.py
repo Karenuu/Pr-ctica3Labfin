@@ -24,7 +24,7 @@ st.markdown("""
 # Load data
 @st.cache_data
 def load_data():
-    data_path = r'/workspaces/Pr-ctica3Labfin/Data/'
+    data_path = 'Data/'
     try:
         factsale = pd.read_csv(f'{data_path}FactSale.csv')
         dimcustomer = pd.read_csv(f'{data_path}DimCostumer.csv')
